@@ -22,10 +22,27 @@ export default {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
 # users-redux-react
+
+## Getting Started
+
+After downloading the app, you need to install the dependencies. Run the following command in the root directory of the project:
+
+```bash
+npm install
+```
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+This will start the Vite development server, and you should be able to view the application
