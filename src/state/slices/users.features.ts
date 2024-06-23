@@ -9,7 +9,13 @@ export const getUsers = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await crudService.getUsers();
-      return response;
+      // Map the response
+      const filteredResponse = response.map(({ name, email, phone }) => ({
+        name,
+        email,
+        phone,
+      }));
+      return filteredResponse;
     } catch (err) {
       console.error(err);
       return rejectWithValue('Failed to fetch users');

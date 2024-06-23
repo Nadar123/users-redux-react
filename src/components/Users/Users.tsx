@@ -23,7 +23,7 @@ const Users: React.FC = () => {
   if (error) return <h1>{error}</h1>;
 
   const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(searchTerm.toLowerCase())
+    user.name?.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return (
     <>
